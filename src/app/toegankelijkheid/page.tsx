@@ -19,8 +19,8 @@ export default function ToegankelijkheidPage() {
       </p>
       <p>
         Loop je tegen een drempel aan? Laat het ons weten via{" "}
-        <a href="mailto:toegankelijkheid@envilabs.nl" className="text-info underline">
-          toegankelijkheid@envilabs.nl
+        <a href="mailto:toegankelijkheid@envilabs.dev" className="text-info underline">
+          toegankelijkheid@envilabs.dev
         </a>
         . We pakken meldingen serieus op.
       </p>

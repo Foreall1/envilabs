@@ -19,11 +19,11 @@ export function Footer() {
               met Nederlandse gemeenten.
             </p>
             <a
-              href="mailto:hallo@envilabs.nl"
+              href="mailto:hallo@envilabs.dev"
               className="mt-6 inline-flex items-center gap-2 text-ui text-slate-200 hover:text-teal"
             >
               <IconMail className="h-[18px] w-[18px]" />
-              hallo@envilabs.nl
+              hallo@envilabs.dev
             </a>
           </div>
 

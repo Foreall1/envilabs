@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://www.envilabs.nl";
+const baseUrl = "https://envilabs.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "/toepassingen", "/trainingen", "/over-ons", "/contact"];

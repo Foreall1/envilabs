@@ -35,7 +35,7 @@ export function DashboardMockup() {
         <span className="h-2 w-2 rounded-full bg-slate-300" aria-hidden="true" />
         <span className="h-2 w-2 rounded-full bg-slate-300" aria-hidden="true" />
         <span className="ml-2 font-mono text-caption tracking-mono text-slate-500">
-          app.envilabs.nl/zaken
+          app.envilabs.dev/zaken
         </span>
       </div>
 

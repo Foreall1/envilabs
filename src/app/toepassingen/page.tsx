@@ -143,7 +143,7 @@ export default function ToepassingenPage() {
             <div className="lg:col-span-7">
               <Reveal delay={120}>
                 <ModuleMockup
-                  path="app.envilabs.nl/meldingen"
+                  path="app.envilabs.dev/meldingen"
                   heading="Meldingen openbare ruimte"
                   caption="Voorbeeldscherm van een toepassing: een tabel met meldingen over de openbare ruimte, het onderwerp en de status van afhandeling."
                   rows={[

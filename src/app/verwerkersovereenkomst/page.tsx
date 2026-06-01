@@ -18,8 +18,8 @@ export default function VerwerkersovereenkomstPage() {
       </p>
       <p>
         Neem contact op via{" "}
-        <a href="mailto:privacy@envilabs.nl" className="text-info underline">
-          privacy@envilabs.nl
+        <a href="mailto:privacy@envilabs.dev" className="text-info underline">
+          privacy@envilabs.dev
         </a>{" "}
         voor de actuele tekst.
       </p>
