@@ -5,6 +5,7 @@ import { display, sans, mono } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { CookieConsent } from "@/components/analytics/CookieConsent";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
         <JsonLd />
         <Analytics />
         <SpeedInsights />
+        <CookieConsent />
       </body>
     </html>
   );

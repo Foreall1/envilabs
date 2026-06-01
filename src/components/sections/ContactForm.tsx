@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { IconCheck } from "@/components/ui/icons";
 import { cn } from "@/lib/cn";
+import { trackContactConversion } from "@/lib/gtag";
 
 type Errors = Partial<Record<"naam" | "organisatie" | "email" | "bericht", string>>;
 
@@ -65,6 +66,7 @@ export function ContactForm() {
     setErrors(found);
     if (Object.keys(found).length === 0) {
       // Geen backend in deze demo: we bevestigen de verzending lokaal.
+      trackContactConversion();
       setSubmitted(true);
     } else {
       // Zet focus op het eerste veld met een fout (a11y).

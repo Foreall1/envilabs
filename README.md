@@ -68,6 +68,21 @@ De design tokens uit het merkboek zijn één-op-één gemapt naar Tailwind:
 - **Spacing** — uitsluitend de schaal 4·8·12·16·24·32·48·64·96.
 - **Radii** — `sm` (3px), `md` (6px), `lg` (8px).
 
+## SEO & analytics
+
+- **Structured data** (`JsonLd`), per-pagina canonicals, dynamische Open
+  Graph-afbeelding, sitemap en robots zijn ingebouwd.
+- **Vercel Web Analytics + Speed Insights** zijn cookieloos en altijd actief.
+  Zet ze eenmalig aan in het Vercel-dashboard (tabs Analytics / Speed Insights).
+- **Google Ads + GA4** (voor SEA-conversiemeting) laden alleen na toestemming
+  via de cookiebanner. Activeer ze door deze env-variabelen in Vercel te zetten
+  (zie `.env.example`):
+  - `NEXT_PUBLIC_GA_ID` — GA4 meet-ID (`G-…`)
+  - `NEXT_PUBLIC_GOOGLE_ADS_ID` — Google Ads ID (`AW-…`)
+  - `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL` — label van de contact-conversie
+  Zonder deze waarden verschijnt de banner niet en wordt er niets van Google
+  geladen. Het contactformulier vuurt bij verzending een lead-conversie af.
+
 ## Toegankelijkheid
 
 - WCAG 2.1 AA als ondergrens.
