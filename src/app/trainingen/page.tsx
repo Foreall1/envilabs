@@ -20,9 +20,16 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
-  title: "Trainingen",
+  title: "Trainingen & opleiding voor het publieke domein",
   description:
-    "EnviLabs verzorgt trainingen en opleiding voor teams in het fysieke domein: in-company, opleidingstrajecten, workshops en kennissessies.",
+    "In-company trainingen, opleidingstrajecten, workshops en kennissessies over datagedreven werken, de Omgevingswet en het DSO — voor teams bij gemeenten, provincies en waterschappen.",
+  alternates: { canonical: "/trainingen" },
+  openGraph: {
+    title: "Trainingen & opleiding voor het publieke domein · EnviLabs",
+    description:
+      "In-company trainingen, opleidingstrajecten, workshops en kennissessies over datagedreven werken, de Omgevingswet en het DSO.",
+    url: "/trainingen",
+  },
 };
 
 const vormen = [

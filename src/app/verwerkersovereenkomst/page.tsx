@@ -4,6 +4,7 @@ import { LegalPage } from "@/components/sections/LegalPage";
 export const metadata: Metadata = {
   title: "Verwerkersovereenkomst",
   description: "De verwerkersovereenkomst tussen EnviLabs en publieke organisaties.",
+  alternates: { canonical: "/verwerkersovereenkomst" },
 };
 
 export default function VerwerkersovereenkomstPage() {

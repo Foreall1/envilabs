@@ -19,9 +19,16 @@ import {
 } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
-  title: "Toepassingen",
+  title: "Digitale toepassingen voor het publieke domein",
   description:
-    "EnviLabs bouwt digitale toepassingen op maat voor het fysieke domein: dashboards, kaartapplicaties, dataloketten, processen en koppelingen.",
+    "Software op maat voor gemeenten, provincies en waterschappen: dashboards, kaartapplicaties, dataloketten, processen en DSO-koppelingen voor het fysieke domein.",
+  alternates: { canonical: "/toepassingen" },
+  openGraph: {
+    title: "Digitale toepassingen voor het publieke domein · EnviLabs",
+    description:
+      "Software op maat voor het fysieke domein: dashboards, kaartapplicaties, dataloketten, processen en DSO-koppelingen.",
+    url: "/toepassingen",
+  },
 };
 
 const types = [

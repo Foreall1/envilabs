@@ -4,6 +4,7 @@ import { LegalPage } from "@/components/sections/LegalPage";
 export const metadata: Metadata = {
   title: "Privacy",
   description: "Hoe EnviLabs omgaat met persoonsgegevens.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

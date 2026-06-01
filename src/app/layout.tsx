@@ -1,45 +1,69 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { display, sans, mono } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = "https://envilabs.dev";
+const defaultTitle =
+  "EnviLabs — digitale toepassingen, advies en trainingen voor het publieke domein";
+const defaultDescription =
+  "EnviLabs ontwikkelt, adviseert en leidt op voor gemeenten, provincies, waterschappen en andere publieke organisaties in het fysieke domein.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "EnviLabs — digitale toepassingen en trainingen voor het fysieke domein",
+    default: defaultTitle,
     template: "%s · EnviLabs",
   },
-  description:
-    "EnviLabs bouwt digitale toepassingen op maat voor het fysieke domein en verzorgt trainingen en opleiding voor de teams die ermee werken.",
+  description: defaultDescription,
+  applicationName: "EnviLabs",
   keywords: [
     "fysieke domein",
-    "leefomgeving",
-    "digitale toepassingen",
-    "software op maat",
-    "trainingen",
-    "opleiding",
+    "publieke domein",
     "Omgevingswet",
+    "vergunningverlening",
+    "digitale toepassingen",
+    "software voor gemeenten",
+    "advies publieke sector",
+    "trainingen datagedreven werken",
+    "DSO",
+    "gemeenten provincies waterschappen",
   ],
   authors: [{ name: "EnviLabs" }],
+  creator: "EnviLabs",
+  publisher: "EnviLabs B.V.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    locale: "nl_NL",
-    url: siteUrl,
+    locale: siteConfig.locale,
+    url: siteConfig.url,
     siteName: "EnviLabs",
-    title: "EnviLabs — digitale toepassingen en trainingen voor het fysieke domein",
-    description:
-      "Software op maat voor het fysieke domein, plus trainingen en opleiding voor de teams die ermee werken.",
+    title: defaultTitle,
+    description: defaultDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "EnviLabs — digitale toepassingen en trainingen voor het fysieke domein",
-    description:
-      "Software op maat en trainingen voor het fysieke domein.",
+    title: defaultTitle,
+    description: defaultDescription,
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -59,6 +83,9 @@ export default function RootLayout({
         <Header />
         <main id="hoofdinhoud">{children}</main>
         <Footer />
+        <JsonLd />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

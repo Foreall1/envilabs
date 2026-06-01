@@ -4,6 +4,7 @@ import { LegalPage } from "@/components/sections/LegalPage";
 export const metadata: Metadata = {
   title: "Toegankelijkheid",
   description: "De toegankelijkheidsverklaring van EnviLabs.",
+  alternates: { canonical: "/toegankelijkheid" },
 };
 
 export default function ToegankelijkheidPage() {

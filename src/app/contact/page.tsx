@@ -9,7 +9,14 @@ import { IconMail, IconClock, IconShieldCheck, IconMap } from "@/components/ui/i
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Neem contact op met EnviLabs. Voor een toepassing op maat, een training of gewoon een eerste verkenning in het fysieke domein.",
+    "Neem contact op met EnviLabs in Assen. Voor een toepassing op maat, advies of een training in het publieke domein.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact · EnviLabs",
+    description:
+      "Neem contact op met EnviLabs. Voor een toepassing op maat, advies of een training in het publieke domein.",
+    url: "/contact",
+  },
 };
 
 const punten = [

@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   title: "Over ons",
   description:
     "EnviLabs ontwikkelt, adviseert en leidt op voor gemeenten, provincies, waterschappen en andere publieke organisaties. Gevestigd in Assen, werkzaam door heel Nederland.",
+  alternates: { canonical: "/over-ons" },
+  openGraph: {
+    title: "Over ons · EnviLabs",
+    description:
+      "EnviLabs ontwikkelt, adviseert en leidt op voor publieke organisaties. Gevestigd in Assen, werkzaam door heel Nederland.",
+    url: "/over-ons",
+  },
 };
 
 const activiteiten = [
