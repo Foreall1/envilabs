@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/ui/Container";
-import { IconMail } from "@/components/ui/icons";
+import { IconMail, IconMap } from "@/components/ui/icons";
 import { footerNav } from "@/lib/navigation";
 
 export function Footer() {
@@ -15,8 +15,8 @@ export function Footer() {
           <div className="md:col-span-4">
             <Logo reversed />
             <p className="mt-4 max-w-xs text-ui text-slate-400">
-              Software voor de uitvoering van de Omgevingswet. Gemaakt voor en
-              met Nederlandse gemeenten.
+              Digitale toepassingen, advies en trainingen voor gemeenten,
+              provincies, waterschappen en andere publieke organisaties.
             </p>
             <a
               href="mailto:hallo@envilabs.dev"
@@ -25,6 +25,14 @@ export function Footer() {
               <IconMail className="h-[18px] w-[18px]" />
               hallo@envilabs.dev
             </a>
+            <p className="mt-3 inline-flex items-start gap-2 text-ui text-slate-400">
+              <IconMap className="h-[18px] w-[18px] shrink-0" />
+              <span>
+                Zwedenlaan 12
+                <br />
+                9403 DE Assen
+              </span>
+            </p>
           </div>
 
           {/* Sitemap */}
@@ -52,8 +60,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/10 py-6 text-caption text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} EnviLabs B.V. — KvK 90000000 — Utrecht</p>
-          <p className="font-mono tracking-mono">Gebouwd op de Omgevingswet</p>
+          <p>© {year} EnviLabs B.V. — KvK 82922306 — Assen</p>
+          <p className="font-mono tracking-mono">Voor het publieke domein</p>
         </div>
       </Container>
     </footer>

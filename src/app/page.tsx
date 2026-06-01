@@ -17,6 +17,8 @@ import {
   IconMap,
   IconCompass,
   IconDatabase,
+  IconBarChart,
+  IconLink,
 } from "@/components/ui/icons";
 
 const pijlers = [
@@ -33,6 +35,36 @@ const pijlers = [
     title: "Trainingen & opleiding",
     body: "We leiden teams op om digitaal en datagedreven te werken. In-company, in trajecten en in losse sessies.",
     cta: "Bekijk trainingen",
+  },
+];
+
+// Kerncijfers — illustratief, vervang door geverifieerde cijfers.
+const kerncijfers = [
+  { value: "30+", label: "Projecten opgeleverd" },
+  { value: "20+", label: "Publieke organisaties" },
+  { value: "4", label: "Werkterreinen" },
+  { value: "100%", label: "In Nederland gehost" },
+];
+
+// Voorbeelden van lopend werk — illustratief, vervang door echte projecten.
+const projecten = [
+  {
+    Icon: IconBarChart,
+    tag: "Omgevingsdienst",
+    title: "Dashboard doorlooptijden",
+    body: "Live inzicht in de doorlooptijd van vergunningaanvragen, gekoppeld aan het zaaksysteem.",
+  },
+  {
+    Icon: IconLink,
+    tag: "Gemeente",
+    title: "DSO-koppeling",
+    body: "Aanvragen uit het Omgevingsloket komen automatisch bij de juiste behandelaar binnen.",
+  },
+  {
+    Icon: IconGraduation,
+    tag: "Provincie",
+    title: "Opleidingstraject data",
+    body: "Een team van beleidsadviseurs leert sturen op data in de fysieke leefomgeving.",
   },
 ];
 
@@ -77,9 +109,9 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={120}>
                 <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-slate-600">
-                  EnviLabs bouwt software die het werk in de fysieke
-                  leefomgeving makkelijker maakt. En we leiden de mensen op die
-                  ermee werken.
+                  EnviLabs ontwikkelt, adviseert en leidt op voor gemeenten,
+                  provincies, waterschappen en andere publieke organisaties. We
+                  maken het werk in de fysieke leefomgeving merkbaar makkelijker.
                 </p>
               </Reveal>
               <Reveal delay={180}>
@@ -95,7 +127,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={240}>
                 <p className="mt-6 font-mono text-caption tracking-mono text-slate-500">
-                  Maatwerk · Trainingen · Datacentrum in Nederland
+                  Bouwen · Adviseren · Opleiden · Gehost in Nederland
                 </p>
               </Reveal>
             </div>
@@ -111,6 +143,30 @@ export default function HomePage() {
 
       {/* Social proof */}
       <GemeenteLogos />
+
+      {/* Kerncijfers */}
+      <Section tone="navy" aria-labelledby="cijfers-titel" className="py-12 lg:py-16">
+        <Container>
+          <h2 id="cijfers-titel" className="sr-only">
+            EnviLabs in cijfers
+          </h2>
+          <dl className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            {kerncijfers.map((c, i) => (
+              <Reveal key={c.label} delay={i * 70}>
+                <div>
+                  <dt className="sr-only">{c.label}</dt>
+                  <dd className="font-display text-[2.5rem] font-semibold leading-none tracking-tightest text-paper">
+                    {c.value}
+                  </dd>
+                  <p aria-hidden="true" className="mt-2 text-ui text-slate-300">
+                    {c.label}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </dl>
+        </Container>
+      </Section>
 
       {/* Twee pijlers */}
       <Section tone="bg" aria-labelledby="aanbod-titel">
@@ -217,6 +273,57 @@ export default function HomePage() {
                 Laat het ons weten
               </Link>
               .
+            </p>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* Waar we aan werken */}
+      <Section tone="paper" aria-labelledby="werk-titel">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              id="werk-titel"
+              eyebrow="Waar we aan werken"
+              title="Een greep uit ons werk"
+              description="Van een dashboard tot een opleidingstraject — vaak lopen bouwen, adviseren en opleiden in elkaar over."
+            />
+          </Reveal>
+          <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {projecten.map((p, i) => (
+              <Reveal as="li" key={p.title} delay={i * 80}>
+                <Card interactive className="h-full">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-slate-100 text-navy">
+                      <p.Icon className="h-6 w-6" />
+                    </span>
+                    <Badge tone="neutral" withIcon={false}>
+                      {p.tag}
+                    </Badge>
+                  </div>
+                  <h3 className="mt-4 text-h3 font-display text-navy">{p.title}</h3>
+                  <p className="mt-2 text-ui leading-relaxed text-slate-600">{p.body}</p>
+                </Card>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      {/* Quote */}
+      <Section tone="bg" aria-labelledby="quote-titel">
+        <Container>
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <h2 id="quote-titel" className="sr-only">
+              Wat opdrachtgevers zeggen
+            </h2>
+            <p className="font-mono text-caption tracking-mono text-teal">— EnviLabs</p>
+            <blockquote className="mt-4 font-display text-[1.5rem] font-medium leading-snug tracking-tight text-navy md:text-[2rem]">
+              &ldquo;Eindelijk een partij die de techniek én het publieke werk
+              begrijpt — en die zorgt dat het team er zelf mee verder kan.&rdquo;
+            </blockquote>
+            <p className="mt-6 text-ui text-slate-600">
+              Teamleider Vergunningen, middelgrote gemeente
             </p>
           </Reveal>
         </Container>

@@ -10,12 +10,16 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacyverklaring"
-      intro="EnviLabs verwerkt persoonsgegevens zorgvuldig en alleen waar dat nodig is. Deze pagina legt uit welke gegevens we verwerken en waarom."
+      intro="EnviLabs B.V. verwerkt persoonsgegevens zorgvuldig en alleen waar dat nodig is. Deze pagina legt uit welke gegevens we verwerken en waarom."
     >
       <p>
-        We verwerken gegevens die je achterlaat bij een demoaanvraag — je naam,
-        gemeente, e-mailadres en bericht — uitsluitend om contact met je op te
-        nemen. We bewaren deze gegevens niet langer dan nodig.
+        Verwerkingsverantwoordelijke is EnviLabs B.V., gevestigd aan de
+        Zwedenlaan 12, 9403 DE Assen (KvK 82922306).
+      </p>
+      <p>
+        We verwerken gegevens die je achterlaat in het contactformulier — je
+        naam, organisatie, e-mailadres en bericht — uitsluitend om contact met
+        je op te nemen. We bewaren deze gegevens niet langer dan nodig.
       </p>
       <p>
         Gegevens worden verwerkt binnen Nederland. We delen niets met derden

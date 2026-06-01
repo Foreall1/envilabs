@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Badge } from "@/components/ui/Badge";
 import { ContactForm } from "@/components/sections/ContactForm";
-import { IconMail, IconClock, IconShieldCheck } from "@/components/ui/icons";
+import { IconMail, IconClock, IconShieldCheck, IconMap } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -50,6 +50,25 @@ export default function ContactPage() {
                     </li>
                   ))}
                 </ul>
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="mt-8 flex items-start gap-3 border-t border-line pt-6">
+                  <span className="mt-px inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100 text-navy">
+                    <IconMap className="h-5 w-5" />
+                  </span>
+                  <span>
+                    <span className="block text-ui font-semibold text-navy">EnviLabs B.V.</span>
+                    <span className="block text-ui text-slate-600">
+                      Zwedenlaan 12, 9403 DE Assen
+                    </span>
+                    <a
+                      href="mailto:hallo@envilabs.dev"
+                      className="mt-1 inline-block text-ui text-info underline"
+                    >
+                      hallo@envilabs.dev
+                    </a>
+                  </span>
+                </div>
               </Reveal>
             </div>
 

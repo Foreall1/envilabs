@@ -3,14 +3,14 @@ import { LegalPage } from "@/components/sections/LegalPage";
 
 export const metadata: Metadata = {
   title: "Verwerkersovereenkomst",
-  description: "De verwerkersovereenkomst tussen EnviLabs en gemeenten.",
+  description: "De verwerkersovereenkomst tussen EnviLabs en publieke organisaties.",
 };
 
 export default function VerwerkersovereenkomstPage() {
   return (
     <LegalPage
       title="Verwerkersovereenkomst"
-      intro="Als gemeente blijf je verwerkingsverantwoordelijke. EnviLabs verwerkt gegevens namens jou, op basis van een verwerkersovereenkomst conform de AVG."
+      intro="Als publieke organisatie blijf je verwerkingsverantwoordelijke. EnviLabs B.V. verwerkt gegevens namens jou, op basis van een verwerkersovereenkomst conform de AVG."
     >
       <p>
         De overeenkomst legt vast welke gegevens we verwerken, met welk doel, en
