@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-slate-800 font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-navy;
+  }
+
+  /* Zichtbare focus-ring: 2px teal, 2px offset (a11y harde eis) */
+  :focus-visible {
+    outline: 2px solid theme("colors.teal");
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Verwijder de default outline alleen waar focus-visible werkt */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  ::selection {
+    background-color: theme("colors.teal");
+    color: theme("colors.navy");
+  }
+}
+
+@layer utilities {
+  /* Tekstuele label in mono met +4% tracking */
+  .label-mono {
+    @apply font-mono uppercase tracking-mono text-ui;
+  }
+}
+
+/* Respecteer prefers-reduced-motion (a11y harde eis) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
